@@ -1,7 +1,7 @@
     const parties = [
-    { name: "Party A", image: "Images/PartyA.png", votes: 0 },
-    { name: "Party B", image: "Images/PartyB.png", votes: 0 },
-    { name: "Party C", image: "Images/PartyC.png", votes: 0 }
+    { name: "Bjp", image: "Images/PartyA.png", votes: 0 },
+    { name: "Congress", image: "Images/PartyB.png", votes: 0 },
+    { name: "Cpi", image: "Images/PartyC.png", votes: 0 }
 ];
 
 const partiesContainer = document.getElementById("parties");
@@ -9,7 +9,7 @@ const selectedPartyImage = document.getElementById("selected-party-image");
 const selectedPartyVotes = document.getElementById("selected-party-votes");
 const resetBtn = document.getElementById("reset-btn");
 
-let selectedParty = prompt("Enter the name of the party to receive votes:");
+let selectedParty = prompt("Enter the name of the party to receive votes:(Bjp/Congress/Cpi)");
 while (!parties.find(party => party.name === selectedParty)) {
     alert("Invalid party name.");
     selectedParty = prompt("Enter the name of the party to receive votes:");
