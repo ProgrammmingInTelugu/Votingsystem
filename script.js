@@ -1,5 +1,5 @@
 const parties = [
-    { name: "Party A", image: "Images/PartyA.png", votes: 0 },
+    { name: "Party A", image: "partyA.jpg", votes: 0 },
     { name: "Party B", image: "partyB.jpg", votes: 0 },
     { name: "Party C", image: "partyC.jpg", votes: 0 }
 ];
@@ -99,6 +99,12 @@ function checkThreshold() {
         handleThresholdReached();
     }
 }
+
+// Function to handle threshold reached
+function handleThresholdReached() {
+    alert("Threshold reached! All subsequent votes will be casted for the selected party.");
+}
+
 // Event listener for reset button
 resetBtn.addEventListener("click", resetVotes);
 
