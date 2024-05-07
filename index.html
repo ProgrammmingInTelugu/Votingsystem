@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voting Website</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voting System</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Voting Website</h1>
-    <div class="voter" id="voter1">
-        <h2>Voter 1</h2>
-        <button onclick="vote('voter1')">Vote</button>
-        <p class="vote-count">Votes: <span>0</span></p>
-    </div>
-    <div class="voter" id="voter2">
-        <h2>Voter 2</h2>
-        <button onclick="vote('voter2')">Vote</button>
-        <p class="vote-count">Votes: <span>0</span></p>
-    </div>
-    <div class="voter" id="voter3">
-        <h2>Voter 3</h2>
-        <button onclick="vote('voter3')">Vote</button>
-        <p class="vote-count">Votes: <span>0</span></p>
-    </div>
-    <div class="voter" id="voter4">
-        <h2>Voter 4</h2>
-        <button onclick="vote('voter4')">Vote</button>
-        <p class="vote-count">Votes: <span>0</span></p>
-    </div>
-    <button onclick="resetVotes()">Reset All Votes</button>
-    <script src="script.js"></script>
+<div class="container">
+  <h1>Voting System</h1>
+  <div class="parties" id="parties"></div>
+  <div class="selected-party">
+    <h2>Selected Party</h2>
+    <img src="" alt="" id="selected-party-image">
+    <p>Votes: <span id="selected-party-votes"></span></p>
+  </div>
+  <button id="reset-btn">Reset Votes</button>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
