@@ -1,5 +1,5 @@
 const parties = [
-    { name: "Party A", image: "partyA.jpg", votes: 0 },
+    { name: "Party A", image: "Images/partyA.jpg.png", votes: 0 },
     { name: "Party B", image: "partyB.jpg", votes: 0 },
     { name: "Party C", image: "partyC.jpg", votes: 0 }
 ];
