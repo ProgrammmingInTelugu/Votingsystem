@@ -1,7 +1,7 @@
 const parties = [
-    { name: "Party A", image: "Images/partyA.png", votes: 0 },
-    { name: "Party B", image: "Images/partyB.png", votes: 0 },
-    { name: "Party C", image: "partyC.jpg", votes: 0 }
+    { name: "Party A", image: "Images/PartyA.png", votes: 0 },
+    { name: "Party B", image: "Images/PartyB.png", votes: 0 },
+    { name: "Party C", image: "Images/PartyC.png", votes: 0 }
 ];
 
 const partiesContainer = document.getElementById("parties");
