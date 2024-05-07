@@ -42,7 +42,7 @@ function renderParties() {
                 vote(party);
             } else {
                 const userSelectedParty = parties.find(p => p.name === selectedParty);
-                userSelectedParty.votes++;
+                vote(party)
  
                 if (clickedPartyImageSrc && thresholdReached) {
                     selectedPartyImage.src = clickedPartyImageSrc; // Use the clicked party's image if available and threshold reached
