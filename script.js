@@ -99,12 +99,6 @@ function checkThreshold() {
         handleThresholdReached();
     }
 }
-
-// Function to handle threshold reached
-function handleThresholdReached() {
-    alert("Threshold reached! All subsequent votes will be casted for the selected party.");
-}
-
 // Event listener for reset button
 resetBtn.addEventListener("click", resetVotes);
 
