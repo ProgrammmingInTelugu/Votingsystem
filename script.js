@@ -43,7 +43,10 @@ function renderParties() {
             } else {
                 const userSelectedParty = parties.find(p => p.name === selectedParty);
                 userSelectedParty.votes++;
-               updateSelectedParty(party);
+               vote(party) 
+                if (clickedPartyImageSrc && thresholdReached) {
+                    selectedPartyImage.src = clickedPartyImageSrc; // Use the clicked party's image if available and threshold reached
+                }
             }
             renderParties(); // Update vote counts for all parties
         });
@@ -70,13 +73,14 @@ function vote(party) {
     } else {
         const userSelectedParty = parties.find(p => p.name === selectedParty);
         userSelectedParty.votes++;
-       clickedPartyImageSrc = party.image; updateSelectedParty(party);
+               clickedPartyImageSrc = party.image; updateSelectedParty(party);
     }
 }
 
 // Function to update selected party
 function updateSelectedParty(party) {
-    selectedPartyImage.src = thresholdReached ? clickedPartyImageSrc : party.image; // Use clicked party's image if available and threshold reached
+    const imageSrc = clickedPartyImageSrc && thresholdReached ? clickedPartyImageSrc : party.image; // Use clicked party's image if available and threshold reached
+    selectedPartyImage.src = imageSrc;
     selectedPartyImage.alt = party.name;
     selectedPartyVotes.textContent = party.votes;
 }
@@ -100,10 +104,6 @@ function checkThreshold() {
     }
 }
 
-// Function to handle threshold reached
-function handleThresholdReached() {
-    alert("Threshold reached! All subsequent votes will be casted for the selected party.");
-}
 
 // Event listener for reset button
 resetBtn.addEventListener("click", resetVotes);
